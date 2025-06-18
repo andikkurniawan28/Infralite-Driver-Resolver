@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\DriverController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
@@ -22,6 +23,7 @@ Route::get('/', WelcomeController::class)->name('welcome')->middleware(['auth'])
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'process'])->name('login_process');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::resource('user', UserController::class)->middleware(['auth']);
+// Route::resource('user', UserController::class)->middleware(['auth']);
 Route::resource('device', DeviceController::class)->middleware(['auth']);
 Route::resource('brand', BrandController::class)->middleware(['auth']);
+Route::resource('driver', DriverController::class)->middleware(['auth']);

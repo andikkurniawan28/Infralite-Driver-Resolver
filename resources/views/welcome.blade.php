@@ -22,7 +22,7 @@
 
         <div class="row g-4">
 
-            <!-- User -->
+            {{-- <!-- User -->
             <div class="col-sm-6 col-md-4">
                 <div class="card card-menu h-100">
                     <div class="card-body text-center">
@@ -32,7 +32,7 @@
                         <a href="{{ route('user.index') }}" class="btn btn-dark">Manage</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Device -->
             <div class="col-sm-6 col-md-4">
@@ -54,6 +54,18 @@
                         <h5 class="card-title">Brand</h5>
                         <p class="card-text">Manage device brands.</p>
                         <a href="{{ route('brand.index') }}" class="btn btn-dark">Manage</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Driver -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card card-menu h-100">
+                    <div class="card-body text-center">
+                        <div class="card-icon"><i class="bi bi-usb-symbol"></i></div>
+                        <h5 class="card-title">Driver</h5>
+                        <p class="card-text">Manage driver for supported devices.</p>
+                        <a href="{{ route('driver.index') }}" class="btn btn-dark">Manage</a>
                     </div>
                 </div>
             </div>

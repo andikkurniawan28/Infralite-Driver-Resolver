@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('device_id')->constrained();
             $table->foreignId('brand_id')->constrained();
             $table->foreignId('operation_system_id')->constrained();
+            $table->string('architecture'); // 32bit atau 64bit
             $table->string('serial_number')->nullable(); // serial perangkat, tidak wajib
             $table->string('name')->unique(); // nama driver
             $table->string('version')->nullable(); // versi driver jika tersedia
